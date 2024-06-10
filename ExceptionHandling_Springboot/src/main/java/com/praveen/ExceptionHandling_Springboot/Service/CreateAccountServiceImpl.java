@@ -45,6 +45,11 @@ public class CreateAccountServiceImpl implements CreateAccountService{
     }
 
     @Override
+    public CreateAccount editAccount(CreateAccount createAccount, String accountId) {
+        return null;
+    }
+
+    @Override
     public CreateAccount getAccountDetaillsByCompositKey(com.praveen.ExceptionHandling_Springboot.util.CompositPrimaryKey_Account compositPrimaryKey_account) throws AccountNotFound {
         CreateAccount accountDetails=createAccountRepo.findByAccountDetails(compositPrimaryKey_account.getAccountId(),compositPrimaryKey_account.getCustomerId(),compositPrimaryKey_account.getPan_id());
         if(accountDetails==null){
